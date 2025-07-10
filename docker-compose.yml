@@ -1,0 +1,16 @@
+services:
+  guacd:
+    image: guacamole/guacd:1.6.0
+    environment:
+      - LOG_LEVEL=debug
+
+  guacamole:
+    image: guacamole/guacamole:1.6.0
+    ports:
+      - 8080:8080
+    environment:
+      - GUACD_HOSTNAME=guacd
+      - GUACAMOLE_HOME=/tmp/guacamole_home/
+      - LOG_LEVEL=debug
+    volumes:
+      - "./guacamole_home/:/tmp/guacamole_home/"

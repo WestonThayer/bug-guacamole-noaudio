@@ -1,0 +1,7 @@
+{
+  "name": "bug-guacamole-noaudio",
+  "private": true,
+  "dependencies": {
+    "@playwright/test": "^1.54.0"
+  }
+}
