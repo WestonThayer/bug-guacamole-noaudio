@@ -21,6 +21,6 @@ It make take 25-50 attempts to reproduce.
 
 ## Notes
 
-I'm not able to reproduce on 1.5.5 (100 attempts), but I recall being able to sometimes reproduce on 1.5.4.
+I'm not able to reproduce on 1.5.5 (100 attempts).
 
 I did some debugging. guacd [raw_encoder_send_audio](https://github.com/apache/guacamole-server/blob/f3f5b9d76649ccc24f551cb166c81078f4b5e236/src/libguac/raw_encoder.c#L34) appears to run when there is no audio. But when I log input read from the `java.net.Socket` in [ReaderGuacamoleReader](https://github.com/apache/guacamole-client/blob/82762fade3a17f4d90d780f2a7a1e4c41da6d095/guacamole-common/src/main/java/org/apache/guacamole/io/ReaderGuacamoleReader.java#L120), I'm not seeing the audio instruction, which would explain why the browser client's WebSocket doesn't receive it either.

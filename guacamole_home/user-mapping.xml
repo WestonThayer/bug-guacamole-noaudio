@@ -1,0 +1,11 @@
+<user-mapping>
+    <authorize username="guac" password="guac">
+        <protocol>rdp</protocol>
+        <param name="hostname">0.0.0.0</param>
+        <param name="port">3389</param>
+        <param name="username">user</param>
+        <param name="password">pass</param>
+        <param name="security">nla</param>
+        <param name="ignore-cert">true</param>
+    </authorize>
+</user-mapping>
